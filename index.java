@@ -89,7 +89,7 @@ public class BaseDatos {
                 path);
         Articulos articulosquery = new Articulos(codigo, null, 0,
                 null);
-        ObjectSet&lt;Articulos&gt; query = bd.queryByExample(articulosquery);
+        ObjectSet<Articulos> query = bd.queryByExample(articulosquery);
         if (query.hasNext()) {
             Articulos ar = query.next();
             tl.setText(ar.getCodigo() + "\n" + ar.getNombre() + "\n"
@@ -108,7 +108,7 @@ public class BaseDatos {
                 path);
         Articulos articulosquery = new Articulos(codigo, null, 0,
                 null);
-        ObjectSet&lt;Articulos&gt; query = bd.queryByExample(articulosquery);
+        ObjectSet<Articulos> query = bd.queryByExample(articulosquery);
         if (query.hasNext()) {
             Articulos ar = query.next();
             ar.setNombre(nombre);
@@ -128,7 +128,7 @@ public class BaseDatos {
                 path);
         Articulos articulosquery = new Articulos(codigo, null, 0,
                 null);
-        ObjectSet&lt;Articulos&gt; query = bd.queryByExample(articulosquery);
+        ObjectSet<Articulos> query = bd.queryByExample(articulosquery);
         Articulos ar = query.next();
         bd.delete(ar);
         bd.close();
@@ -138,7 +138,7 @@ public class BaseDatos {
         bd = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),
                 path);
         Articulos ar = new Articulos();
-        ObjectSet&lt;Articulos&gt; result = bd.queryByExample(ar);
+        ObjectSet<Articulos> result = bd.queryByExample(ar);
         tl.setText("");
         while (result.hasNext()) {
             Articulos Ar = (Articulos) result.next();
@@ -161,7 +161,7 @@ public class Formulario extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // &lt;editor-fold defaultstate="collapsed" desc="Generated Code"&gt;//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
 
     private void initComponents() {
 
@@ -342,7 +342,7 @@ public class Formulario extends javax.swing.JFrame {
         );
 
         pack();
-    }// &lt;/editor-fold&gt;//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void txtcodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodeActionPerformed
 
